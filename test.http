@@ -1,0 +1,34 @@
+# main
+GET http://localhost:6257/api
+
+###
+# 유저의 친구목록 조회
+# 형식 : http://localhost:6257/api/friends?My_id=~~~
+GET http://localhost:6257/api/friends?My_id=bumkyu11
+
+###
+# 친구 검색
+# 형식 : http://localhost:6257/api/friends?My_id=~~~&Friend_id=~~~
+GET http://localhost:6257/api/friends?My_id=bumkyu11&Friend_id=suji
+
+###
+# 친구 추가
+POST http://localhost:6257/api/friends
+
+Content-Type: application/json
+
+# body에 아래 내용 담아 보내주세요!
+
+{
+    "My_id": "bumkyu11",
+    "Friend_id": "suji"
+}
+###
+# 친구관계 상태 변경
+# 형식 : http://localhost:6257/api/friends/My_id/Friend_id/f_state
+PUT http://localhost:6257/api/friends/bumkyu11/suji/1
+
+###
+# 특정 친구관계 제거
+# 형식 : http://localhost:6257/api/friends/My_id/Friend_id
+DELETE http://localhost:6257/api/friends/bumkyu11/suji
