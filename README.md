@@ -7,11 +7,15 @@ routes/user.js --> 로그인, 회원가입 스크립트(JWT토큰 이용, HTTP O
 routes/chatlist.js --> 채팅목록 스크립트<br><br>
 
 주의사항<br>
-큰 틀은 조교 예제 코드를 참조했음<br>
-app.js에서 urlencoded를 사용해서 urlencoded로 보내야함<br>
-bcrypt로 암호화를 진행해서 bcrypt 패키지 설치 필요<br>
-jwt token을 위해 npm install --save jsonwebtoken 필요<br>
-chatlist 조회를 위해 db schema에 fk로 receiver와 user.id 추가<br>
-암호화된 비밀번호를 저장하기 위해 db schema에 user.PW 자료형을 CHAR(60)으로 수정<br>
-cors는 일단 app.js에서 주석처리함 필요시 comment out하여 사용 가능<br>
-db.js의 정보는 서버에 올릴시 변경필요, 현재는 localhost 기준
+-큰 틀은 조교 예제 코드를 참조했음<br>
+-app.js에서 urlencoded를 사용해서 urlencoded로 보내야함<br>
+-bcrypt로 암호화를 진행해서 bcrypt 패키지 설치 필요<br>
+-jwt token을 위해 npm install --save jsonwebtoken 필요<br>
+-chatlist 조회를 위해 db schema에 fk로 receiver와 user.id 추가<br>
+-암호화된 비밀번호를 저장하기 위해 db schema에 user.PW 자료형을 CHAR(60)으로 수정<br>
+-cors는 일단 app.js에서 주석처리함 필요시 comment out하여 사용 가능<br>
+-db.js의 정보는 서버에 올릴시 변경필요, 현재는 localhost 기준<br>
+-chatlist.js는 json으로 success, info, status를 response함<br>
+success는 채팅목록의 유무<br>
+info는 chat table의 row를 내림차순으로 정렬한 배열<br>
+status는 row에 해당하는 상대방의 login_status를 같은 index로 접근할 수 있는 배열
