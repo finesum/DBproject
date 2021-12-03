@@ -13,4 +13,5 @@ bcrypt로 암호화를 진행해서 bcrypt 패키지 설치 필요<br>
 jwt token을 위해 npm install --save jsonwebtoken 필요<br>
 chatlist 조회를 위해 db schema에 fk로 receiver와 user.id 추가<br>
 암호화된 비밀번호를 저장하기 위해 db schema에 user.PW 자료형을 CHAR(60)으로 수정<br>
-cors는 일단 app.js에서 주석처리함 필요시 comment out하여 사용 가능
+cors는 일단 app.js에서 주석처리함 필요시 comment out하여 사용 가능<br>
+db.js의 정보는 서버에 올릴시 변경필요, 현재는 localhost 기준
